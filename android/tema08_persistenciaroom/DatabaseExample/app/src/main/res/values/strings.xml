@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DatabaseExample</string>
+    <string name="anadir_pelicula">Añadir pelicula</string>
+</resources>

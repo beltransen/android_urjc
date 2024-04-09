@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ViewModelLiveData</string>
+    <string name="anadir_pelicula">Añadir pelicula</string>
+</resources>

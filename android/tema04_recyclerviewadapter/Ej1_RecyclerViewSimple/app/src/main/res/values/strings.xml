@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecyclerVIew</string>
+    <string name="anadir_elemento">Añadir elemento</string>
+</resources>

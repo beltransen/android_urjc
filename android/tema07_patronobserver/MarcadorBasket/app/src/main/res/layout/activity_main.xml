@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="myViewModel"
+            type="urjc.lsmu.marcadorbasket.MarcadorViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/columnaA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/separador"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintHorizontal_chainStyle="packed">
+
+            <TextView
+                android:id="@+id/equipoA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Equipo A"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/marcadorA"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/marcadorA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{myViewModel.puntosA.toString()}"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toTopOf="@+id/add1A"
+                app:layout_constraintTop_toBottomOf="@+id/equipoA"
+                tools:layout_editor_absoluteX="340dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/add1A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                app:layout_constraintBottom_toTopOf="@+id/add2A"
+                app:layout_constraintTop_toBottomOf="@+id/marcadorA"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+                <!--android:onClick="@{() -> myViewModel.incrementarMarcador(true, 1)}"-->
+
+            <Button
+                android:id="@+id/add2A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+2"
+                app:layout_constraintBottom_toTopOf="@+id/add3A"
+                app:layout_constraintTop_toBottomOf="@+id/add1A"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/add3A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add2A"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/separador"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="#B3AAAA"
+            app:layout_constraintTop_toTopOf="@id/columnaA"
+            app:layout_constraintBottom_toBottomOf="@id/columnaA"
+            app:layout_constraintStart_toEndOf="@id/columnaA"
+            app:layout_constraintEnd_toStartOf="@id/columnaB"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/columnaB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/separador"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp">
+
+            <TextView
+                android:id="@+id/equipoB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Equipo B"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/marcadorB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/marcadorB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:text="@{myViewModel.puntosB.toString()}"
+                app:layout_constraintBottom_toTopOf="@+id/add1B"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/equipoB" />
+
+            <Button
+                android:id="@+id/add1B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                app:layout_constraintBottom_toTopOf="@+id/add2B"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/marcadorB" />
+
+            <Button
+                android:id="@+id/add2B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+2"
+                app:layout_constraintBottom_toTopOf="@+id/add3B"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add1B" />
+
+            <Button
+                android:id="@+id/add3B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add2B" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@id/columnaA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

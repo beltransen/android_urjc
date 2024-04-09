@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EventosRecyclerView</string>
+    <string name="detalle_telefono">Teléfono:</string>
+    <string name="detalle_email">Email:</string>
+    <string name="detalle_nacimiento">Nacimiento:</string>
+    <string name="anadir_contacto">Añadir contacto</string>
+</resources>
