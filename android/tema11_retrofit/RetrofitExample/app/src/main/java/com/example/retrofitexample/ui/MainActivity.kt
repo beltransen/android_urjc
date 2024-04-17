@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -19,6 +20,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
     private val viewModel: PeliculasViewModel by viewModels()
     private lateinit var peliculasAdapter: PeliculasAdapter
+    private lateinit var txtConexion: TextView
     private lateinit var progressBar: ProgressBar
     private lateinit var rvMovies: RecyclerView
     private val TAG = "MainActivity"
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        txtConexion = findViewById(R.id.txtError)
         progressBar = findViewById(R.id.paginationProgressBar)
         rvMovies = findViewById(R.id.rvMovies)
 
@@ -35,26 +38,26 @@ class MainActivity : AppCompatActivity() {
         rvMovies.layoutManager = LinearLayoutManager(this)
 
         viewModel.peliculas.observe(this) { response ->
-            lifecycleScope.launch {
-                delay(3000L)
-                when (response) {
-                    is PeliculasState.Success -> {
-                        hideProgressBar()
-                        response.datos?.let { newsResponse ->
-                            peliculasAdapter.differ.submitList(newsResponse)
-                        }
+            when (response) {
+                is PeliculasState.Success -> {
+                    hideSinConexion()
+                    hideProgressBar()
+                    response.datos?.let { newsResponse ->
+                        peliculasAdapter.differ.submitList(newsResponse)
                     }
+                }
 
-                    is PeliculasState.Error -> {
-                        hideProgressBar()
-                        response.mensaje?.let { mensaje ->
-                            Log.e(TAG, "Ocurrió un error: $mensaje")
-                        }
+                is PeliculasState.Error -> {
+                    hideProgressBar()
+                    showSinConexion()
+                    response.mensaje?.let { mensaje ->
+                        Log.e(TAG, "Ocurrió un error: $mensaje")
                     }
+                }
 
-                    is PeliculasState.Loading -> {
-                        showProgressBar()
-                    }
+                is PeliculasState.Loading -> {
+                    hideSinConexion()
+                    showProgressBar()
                 }
             }
         }
@@ -66,5 +69,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun showProgressBar() {
         progressBar.visibility = View.VISIBLE
+    }
+
+    private fun showSinConexion() {
+        txtConexion.visibility = View.VISIBLE
+    }
+
+
+    private fun hideSinConexion() {
+        txtConexion.visibility = View.INVISIBLE
     }
 }

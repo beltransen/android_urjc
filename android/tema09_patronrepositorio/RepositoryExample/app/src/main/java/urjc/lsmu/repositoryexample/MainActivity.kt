@@ -8,12 +8,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import urjc.lsmu.repositoryexample.data.Pelicula
 import urjc.lsmu.repositoryexample.viewmodels.PeliculasViewModelFactory
-import urjc.lsmu.repositoryexample.data.source.local.PeliculaEntity
 import urjc.lsmu.repositoryexample.databinding.ActivityMainBinding
 import urjc.lsmu.repositoryexample.viewmodels.PeliculasViewModel
-import java.text.SimpleDateFormat
 import java.time.LocalDate
-import java.util.Date
 
 class MainActivity : AppCompatActivity() {
     lateinit var viewModel: PeliculasViewModel // Declaramos el viewModel

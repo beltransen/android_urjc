@@ -1,4 +1,4 @@
-package urjc.lsmu.repositoryexample.data.source.local
+package urjc.lsmu.repositoryexample.data.local
 
 import android.content.Context
 import androidx.room.Database
@@ -13,7 +13,7 @@ abstract class PeliculasRoomDatabase : RoomDatabase(){
         @Volatile
         private var INSTANCE: PeliculasRoomDatabase? = null
 
-        fun getInstance(context: Context): PeliculasRoomDatabase{
+        fun getInstance(context: Context): PeliculasRoomDatabase {
             val tempInstance = INSTANCE
             if(tempInstance != null){
                 return tempInstance

@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class PeliculasViewModel: ViewModel() {
     private val repository = PeliculasRepository()
-    private var _peliculas: MutableLiveData<PeliculasState> =  MutableLiveData()
+    private var _peliculas: MutableLiveData<PeliculasState> =  MutableLiveData(PeliculasState.Loading()) // "Fallo de conexión"
     val peliculas: LiveData<PeliculasState>
         get() = _peliculas
 

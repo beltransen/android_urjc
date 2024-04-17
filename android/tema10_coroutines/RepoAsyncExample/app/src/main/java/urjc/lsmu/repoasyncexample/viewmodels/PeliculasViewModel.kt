@@ -21,14 +21,12 @@ class PeliculasViewModel(context: Context): ViewModel() {
     }
 
     fun addPelicula(pelicula: Pelicula){
-//        repository.addPelicula(pelicula)
         viewModelScope.launch(Dispatchers.IO) {
             repository.addPelicula(pelicula)
         }
     }
 
     fun delPelicula(pelicula: Pelicula){
-//        repository.delPelicula(pelicula)
         viewModelScope.launch(Dispatchers.IO) {
             repository.delPelicula(pelicula)
         }

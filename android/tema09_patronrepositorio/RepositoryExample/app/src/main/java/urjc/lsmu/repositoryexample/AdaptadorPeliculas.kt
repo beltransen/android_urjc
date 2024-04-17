@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import urjc.lsmu.repositoryexample.data.Pelicula
-import urjc.lsmu.repositoryexample.data.source.local.PeliculaEntity
 
 class AdaptadorPeliculas():
     RecyclerView.Adapter<AdaptadorPeliculas.MyViewHolder>() {

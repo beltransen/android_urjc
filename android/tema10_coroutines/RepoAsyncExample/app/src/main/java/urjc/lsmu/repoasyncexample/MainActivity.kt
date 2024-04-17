@@ -31,14 +31,20 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        val binding: ActivityMainBinding =
+            DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         // Instanciamos el ViewModel con el ViewModelProvider a través del Factory creado para poder pasarle parámetros
-        viewModel = ViewModelProvider(this, PeliculasViewModelFactory(applicationContext))[PeliculasViewModel::class.java]
+        viewModel = ViewModelProvider(
+            this,
+            PeliculasViewModelFactory(applicationContext)
+        )[PeliculasViewModel::class.java]
 
         binding.btnAddPelicula.setOnClickListener {
-            val peli = Pelicula(null, "Todo a la vez en todas partes",
-                LocalDate.parse("2022-03-11"), "Dan Kwan, Daniel Scheinert")
+            val peli = Pelicula(
+                null, "Todo a la vez en todas partes",
+                LocalDate.parse("2022-03-11"), "Dan Kwan, Daniel Scheinert"
+            )
             viewModel.addPelicula(peli) // Añadimos la película usando la función del viewmodel
         }
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
@@ -48,49 +54,9 @@ class MainActivity : AppCompatActivity() {
         val peliculas_observer = Observer<List<Pelicula>> {
             miAdaptador.setPeliculas(it)
         }
-
-        lifecycleScope.launch{
-            coroutineFunction()
-        }
-        lifecycleScope.launch(Dispatchers.IO){
-            coroutineFunction2()
-        }
-
-        Log.d("Main", "onCreate")
-        viewModel.peliculas.observe(this, peliculas_observer) // Observamos la lista de películas del viewmodel
-    }
-
-    suspend fun coroutineFunction(){
-        delay(1000L)
-        Log.d("Main", "coroutine")
-    }
-
-    suspend fun coroutineFunction2(){
-        withContext(Dispatchers.IO){
-//            delay(500L)
-            Log.d("Main", "context")
-        }
-        CoroutineScope(Dispatchers.IO).launch {
-            Log.d("Main", "context")
-        }
+        viewModel.peliculas.observe(
+            this,
+            peliculas_observer
+        ) // Observamos la lista de películas del viewmodel
     }
 }
-//
-//class Libro
-//
-//@Dao
-//interface LibrosDao {
-//
-//    @Query("SELECT * FROM libros")
-//    suspend fun getAll(): Array<Libro>
-//
-//    @Insert
-//    suspend fun insert(vararg libro: Libro)
-//
-//    @Update
-//    suspend fun update(libro: Libro)
-//
-//    @Delete
-//    suspend fun delete(libro: Libro)
-//}
-//

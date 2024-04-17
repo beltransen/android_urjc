@@ -1,4 +1,4 @@
-package urjc.lsmu.repositoryexample.data.source.local
+package urjc.lsmu.repositoryexample.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

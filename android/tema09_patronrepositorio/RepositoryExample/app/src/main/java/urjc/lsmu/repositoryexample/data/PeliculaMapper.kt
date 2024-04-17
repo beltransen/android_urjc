@@ -1,7 +1,6 @@
 package urjc.lsmu.repositoryexample.data
 
-import urjc.lsmu.repositoryexample.data.source.local.PeliculaEntity
-import java.text.SimpleDateFormat
+import urjc.lsmu.repositoryexample.data.local.PeliculaEntity
 import java.time.LocalDate
 
 fun PeliculaEntity.toDomain(): Pelicula {
