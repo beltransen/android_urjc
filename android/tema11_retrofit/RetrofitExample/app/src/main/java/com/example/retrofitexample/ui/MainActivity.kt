@@ -75,7 +75,6 @@ class MainActivity : AppCompatActivity() {
         txtConexion.visibility = View.VISIBLE
     }
 
-
     private fun hideSinConexion() {
         txtConexion.visibility = View.INVISIBLE
     }
