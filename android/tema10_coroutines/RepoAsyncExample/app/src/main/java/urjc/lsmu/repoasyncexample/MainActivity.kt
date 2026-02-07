@@ -1,25 +1,11 @@
 package urjc.lsmu.repoasyncexample
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import urjc.lsmu.repoasyncexample.data.Pelicula
 import urjc.lsmu.repoasyncexample.viewmodels.PeliculasViewModelFactory
 import urjc.lsmu.repoasyncexample.databinding.ActivityMainBinding
