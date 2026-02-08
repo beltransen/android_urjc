@@ -1,11 +1,11 @@
-package urjc.lsmu.databaseexample.data.source.local
+package urjc.lsmu.databaseviewmodelexample.data.source.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Pelicula::class], version = 1)
+@Database(entities = [PeliculaEntity::class], version = 1)
 abstract class PeliculasRoomDatabase : RoomDatabase(){
     abstract fun peliculaDAO(): PeliculaDAO
 

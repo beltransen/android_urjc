@@ -1,4 +1,4 @@
-package urjc.lsmu.databaseexample.data
+package urjc.lsmu.databaseviewmodelexample.data
 
 import android.content.Context
 import androidx.lifecycle.ViewModel

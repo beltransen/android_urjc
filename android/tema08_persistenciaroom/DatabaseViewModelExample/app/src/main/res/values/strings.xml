@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">DatabaseExample</string>
+    <string name="app_name">DatabaseVMExample</string>
     <string name="anadir_pelicula">Añadir pelicula</string>
 </resources>

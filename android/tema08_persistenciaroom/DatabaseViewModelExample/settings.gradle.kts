@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DatabaseExample"
+rootProject.name = "DatabaseViewModelExample"
 include(":app")
  

@@ -1,4 +1,4 @@
-package urjc.lsmu.databaseexample.data.source.local
+package urjc.lsmu.databaseviewmodelexample.data.source.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -10,13 +10,13 @@ import androidx.room.Update
 @Dao
 interface PeliculaDAO {
     @Insert
-    fun insert(vararg peliculaModel: PeliculaEntity)
+    fun insert(vararg peliculaEntityModel: PeliculaEntity)
 
     @Update
-    fun update(peliculaModel: PeliculaEntity)
+    fun update(peliculaEntityModel: PeliculaEntity)
 
     @Delete
-    fun delete(peliculaModel: PeliculaEntity)
+    fun delete(peliculaEntityModel: PeliculaEntity)
 
     @Query("SELECT * FROM pelicula")
     fun getAll(): LiveData<List<PeliculaEntity>>

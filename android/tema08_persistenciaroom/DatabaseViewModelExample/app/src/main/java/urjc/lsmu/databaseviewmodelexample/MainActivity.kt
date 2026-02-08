@@ -1,4 +1,4 @@
-package urjc.lsmu.databaseexample
+package urjc.lsmu.databaseviewmodelexample
 
 import android.os.Bundle
 import android.util.Log
@@ -7,10 +7,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import urjc.lsmu.databaseexample.data.PeliculasViewModelFactory
-import urjc.lsmu.databaseexample.data.source.local.Pelicula
-import urjc.lsmu.databaseexample.databinding.ActivityMainBinding
-import urjc.lsmu.databaseexample.data.PeliculasViewModel
+import urjc.lsmu.databaseviewmodelexample.data.PeliculasViewModelFactory
+import urjc.lsmu.databaseviewmodelexample.data.source.local.PeliculaEntity
+import urjc.lsmu.databaseviewmodelexample.databinding.ActivityMainBinding
+import urjc.lsmu.databaseviewmodelexample.data.PeliculasViewModel
 
 class MainActivity : AppCompatActivity() {
     lateinit var viewModel: PeliculasViewModel // Declaramos el viewModel
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this, PeliculasViewModelFactory(applicationContext))[PeliculasViewModel::class.java]
 
         binding.btnAddPelicula.setOnClickListener {
-            var peli = Pelicula(null, "Todo a la vez en todas partes",
+            var peli = PeliculaEntity(null, "Todo a la vez en todas partes",
                 2023, "Dan Kwan, Daniel Scheinert")
             viewModel.addPelicula(peli) // Añadimos la película usando la función del viewmodel
         }
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         var miAdaptador = AdaptadorPeliculas()
         binding.recyclerView.adapter = miAdaptador
 
-        var peliculas_observer = Observer<List<Pelicula>> {
+        var peliculas_observer = Observer<List<PeliculaEntity>> {
             Log.d("Observer", "Insertado")
             miAdaptador.setPeliculas(it)
         }

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "urjc.lsmu.databaseexample"
+    namespace = "urjc.lsmu.databaseviewmodelexample"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "urjc.lsmu.databaseexample"
+        applicationId = "urjc.lsmu.databaseviewmodelexample"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

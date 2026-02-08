@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import urjc.lsmu.databaseexample.data.source.local.Pelicula
+import urjc.lsmu.databaseexample.data.source.local.PeliculaEntity
 
 class AdaptadorPeliculas():
     RecyclerView.Adapter<AdaptadorPeliculas.MyViewHolder>() {
-        var data: List<Pelicula> = emptyList()
+        var data: List<PeliculaEntity> = emptyList()
 
     inner class MyViewHolder(val row: View): RecyclerView.ViewHolder(row){
         val txtTitulo = row.findViewById<TextView>(R.id.titulo)
@@ -25,12 +25,12 @@ class AdaptadorPeliculas():
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.txtTitulo.text = data.get(position).titulo
         holder.txtDirector.text = data.get(position).director
-        holder.txtAnyo.text = data.get(position).anyo.toString()
+        holder.txtAnyo.text = data.get(position).estreno.toString()
     }
 
     override fun getItemCount(): Int = data.size
 
-    fun setPeliculas(nuevaLista: List<Pelicula>){
+    fun setPeliculas(nuevaLista: List<PeliculaEntity>){
         data = nuevaLista
         notifyDataSetChanged()
     }

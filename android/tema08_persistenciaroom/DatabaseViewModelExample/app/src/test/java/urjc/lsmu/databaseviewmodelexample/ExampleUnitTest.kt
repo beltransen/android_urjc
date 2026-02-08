@@ -1,4 +1,4 @@
-package urjc.lsmu.databaseexample
+package urjc.lsmu.databaseviewmodelexample
 
 import org.junit.Test
 
