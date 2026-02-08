@@ -20,5 +20,4 @@ class MarcadorViewModel: ViewModel() {
         puntosA = 0
         puntosB = 0
     }
-
 }
