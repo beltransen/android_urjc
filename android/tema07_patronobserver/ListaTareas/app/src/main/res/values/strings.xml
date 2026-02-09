@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ListaTareas</string>
+    <string name="anadir_tarea">Añadir tarea</string>
+    <string name="completada">Completada</string>
+    <string name="no_completada">No completada</string>
+    <string name="guardar_tarea">Guardar tarea</string>
+    <string name="nombre_de_tarea">Nombre de tarea</string>
+    <string name="descripcion">Descripción</string>
+</resources>
