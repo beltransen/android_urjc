@@ -28,15 +28,17 @@ La estructura de la asignatura coincide con la estructura de carpetas de este re
 - **Tema 11:** [Localización](android/tema12_localizacion/)
 - **Tema 12:** [Mapas](android/tema13_mapas/)
 
-## Autor
+### Instrucciones de uso
+Para inspeccionar y poner a funcionar las soluciones contenidas en este repositorio se recomienda utilizar los siguientes IDEs:
+- **IntelliJ IDEA**: para los ejercicios en Kotlin del Bloque I.
+- **Android Studio**: para los ejercicios de Android del Bloque II.
+
+Ambos entornos de desarrollo son de uso gratuito y soportan los sistemas operativos mayoritarios: Linux, Windows y MacOS.
+
+### Autor
 
 [Jorge Beltrán de la Cita](https://github.com/beltransen)
 
-## Licencia
+### Licencia
 
-[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
-
-Este trabajo está licenciado bajo una Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional.
-
-[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+Este trabajo está licenciado bajo la GNU General Public License v3.0. Ver [LICENSE.md](LICENSE.md) para más detalles.
