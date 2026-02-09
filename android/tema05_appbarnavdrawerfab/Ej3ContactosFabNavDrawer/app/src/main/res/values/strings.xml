@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Ej3ContactosFabNavDrawer</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="menu_gallery">Galeria</string>
+    <string name="menu_slideshow">Slideshow\n</string>
+    <string name="vaciar_lista_de_contactos">Vaciar lista de contactos</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="anadir_contacto">Añadir contacto</string>
+    <string name="detalle_telefono">Teléfono:</string>
+    <string name="detalle_email">Email:</string>
+    <string name="detalle_nacimiento">Nacimiento:</string>
+    <string name="menu_agenda">Agenda</string>
+    <string name="menu_camara">Cámara</string>
+    <string name="nombre">Nombre</string>
+    <string name="telefono">Telófono</string>
+    <string name="email">Email</string>
+    <string name="nacimiento">Nacimiento</string>
+    <string name="guardar">Guardar</string>
+</resources>

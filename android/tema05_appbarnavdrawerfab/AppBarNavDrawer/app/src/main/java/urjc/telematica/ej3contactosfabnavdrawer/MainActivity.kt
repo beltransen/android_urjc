@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setHomeAsUpIndicator(android.R.drawable.ic_menu_compass)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "jajaj "
+        supportActionBar?.title = "Elementos de navegación"
 
         drawerLayout = findViewById(R.id.drawer_layout)
         navView = findViewById(R.id.nav_view)

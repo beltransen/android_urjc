@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@drawable/delete_sweep"
+        android:title="@string/vaciar_lista_de_contactos"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_acerca_de"
+        android:icon="@drawable/info"
+        android:title="@string/acerca_de"
+        app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dummy1"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery"/>
+        <item
+            android:id="@+id/nav_dummy2"
+            android:icon="@android:drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow"/>
+    </group>
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dummy3"
+            android:title="@string/action_settings"
+            android:icon="@drawable/ic_settings"/>
+        <item
+            android:id="@+id/nav_dummy4"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/menu_camara"/>
+        <item
+            android:id="@+id/nav_dummy5"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="@string/menu_agenda"/>
+    </group>
+</menu>
