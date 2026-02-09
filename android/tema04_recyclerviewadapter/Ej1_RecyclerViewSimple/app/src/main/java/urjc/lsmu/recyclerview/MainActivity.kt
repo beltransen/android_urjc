@@ -26,6 +26,5 @@ class MainActivity : AppCompatActivity() {
             listaStrings.add("Hola")
             miAdaptador.notifyItemInserted(listaStrings.size)
         }
-
     }
 }

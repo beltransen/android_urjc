@@ -1,8 +1,13 @@
 <resources>
-    <string name="app_name">GPSEj3</string>
+    <string name="app_name">GPSEj4</string>
     <string name="encender">Encender</string>
     <string name="apagar">Apagar</string>
     <string name="posicion_gps">Posicion GPS</string>
     <string name="tiempo_de_la_muestra">Tiempo de la muestra</string>
     <string name="obtener_ubicacion">Obtener ubicación</string>
+
+    <!-- Added strings used by MainActivity -->
+    <string name="exito">ÉXITO</string>
+    <string name="fracaso">FALLO</string>
+    <string name="no_permisos_localizacion">No hay permisos de localización</string>
 </resources>

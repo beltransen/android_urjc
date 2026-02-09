@@ -61,5 +61,4 @@ class AdaptadorContactosEventos(val data: List<Contacto>, val clickListener: RVC
     }
 
     override fun getItemCount(): Int = data.size
-
 }

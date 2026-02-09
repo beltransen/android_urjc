@@ -79,5 +79,4 @@ class MainActivity : AppCompatActivity() {
         etNacimiento.text.clear()
         etNombre.requestFocus()
     }
-
 }
