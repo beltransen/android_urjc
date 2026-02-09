@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ej3a5Activities</string>
+    <string name="introduce_una_url">Introduce una URL</string>
+    <string name="bienvenido_actividad_secundaria">Bienvenido a tu primera actividad secundaria</string>
+    <string name="introduce_tu_texto">Introduce tu texto</string>
+    <string name="lanzar_actividad_2">Lanzar Actividad 2</string>
+</resources>

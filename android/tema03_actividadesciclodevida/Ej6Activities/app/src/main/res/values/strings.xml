@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ej6Activities</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="anadir">Añadir</string>
+    <string name="lista_de_la_compra">Lista de la compra</string>
+    <string name="precio">Precio</string>
+    <string name="anadir_producto">Añadir producto</string>
+    <string name="nombre_del_producto">Nombre del producto</string>
+</resources>
