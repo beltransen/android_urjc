@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DatabaseVMExample</string>
+    <string name="portada_del_libro">Portada del libro</string>
+    <string name="anadir_libro">Añadir libro</string>
+</resources>
