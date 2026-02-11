@@ -2,6 +2,10 @@
 
 En este repositorio se encuentran las soluciones a los ejercicios de programación de la asignatura Laboratorio de Sistemas Móviles y Ubicuos, impartida en el Grado en Ingeniería Telemática de la Universidad Rey Juan Carlos.
 
+Los materiales docentes en abierto de la asignatura se encuentran depositados en [BURJC Digital](https://hdl.handle.net/10115/163497). Estos incluyen las diapositivas de clase y los enunciados de los ejercicios 
+
+
+
 La estructura de la asignatura coincide con la estructura de carpetas de este repositorio, para facilitar su navegación:
 
 ## Bloque I. Programación con Kotlin
